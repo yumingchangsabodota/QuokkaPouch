@@ -5,7 +5,15 @@ edition = "2024"
 
 [dependencies]
 wallet = { path = "wallet"}
+sp-core = "37.0.0"
 subxt = "0.43.0"
-bip39 = { version = "2.2.0", features = ["std"] }
+bip39 = { version = "2.2.0", features = ["std", "rand"] }
 hex = "0.4.3"
 base64 = "0.22.1"
+
+
+[workspace]
+members = [
+    ".",
+    "wallet"
+]
