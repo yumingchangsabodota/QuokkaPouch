@@ -1,3 +1,6 @@
+
+use wallet::Crypto;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{:?}",Crypto::Polkadot);
 }
