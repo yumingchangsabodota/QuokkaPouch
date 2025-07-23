@@ -15,5 +15,6 @@ base64 = "0.22.1"
 [workspace]
 members = [
     ".",
-    "wallet"
+    "wallet",
+    "utils",
 ]

@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bip39 = { version = "2.2.0", features = ["std", "rand"] }
+utils = { path = "../utils"}
 sp-core = "37.0.0"

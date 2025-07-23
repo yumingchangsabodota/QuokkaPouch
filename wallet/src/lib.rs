@@ -1,14 +1,7 @@
 
-use bip39::Mnemonic;
 use sp_core::{sr25519, Pair, crypto::{Ss58AddressFormat,Ss58Codec}};
 use sp_core::hexdisplay::HexDisplay;
 
-
-
-fn get_random_mnemonic() -> String {
-    let m = Mnemonic::generate(24).unwrap();
-    m.to_string()
-}
 
 #[derive(Debug)]
 pub enum Crypto{
@@ -58,10 +51,13 @@ impl Wallet {
 
 #[cfg(test)]
 mod tests {
+
+    use utils::get_random_mnemonic;
+
     #[test]
     fn test_construct(){
         let p = "".to_string();
-        let mnemonic = super::get_random_mnemonic();
+        let mnemonic = get_random_mnemonic();
         let w = super::Wallet{
             mnemonic: mnemonic,
             password: p,
